@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$Gray: #f5f5f5;
+
+html {
+    font-family: sans-serif;
+}
+@mixin main-width {
+    margin:  0 auto;
+    max-width: 700px;
+}
+
+header {
+    @include main-width;
+}
+
+main {
+    @include main-width;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    .logo { 
+        width: 40px;
+        height: 40px;
+        background-image: url("/assets/book.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .nav-switches {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .left-side {
+        border-right: 1px solid gray;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        padding-right: 1rem;
+
+        button {
+            all: unset;
+            width: 25px;
+            height: 25px;
+            background-image: url("/assets/arrow-down.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+form {
+    margin-top: 2rem;
+    height: 3rem;
+
+    input {
+        all: unset;
+        padding: 0 10px;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        background-color: $Gray;
+    }
+}
