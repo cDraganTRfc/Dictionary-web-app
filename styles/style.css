@@ -8,6 +8,10 @@ html {
   font-family: sans-serif;
 }
 
+body {
+  padding: 10px;
+}
+
 header {
   margin: 0 auto;
   max-width: 700px;
@@ -53,12 +57,33 @@ nav .left-side button {
 form {
   margin-top: 2rem;
   height: 3rem;
+  position: relative;
 }
 form input {
   all: unset;
-  padding: 0 10px;
+  font-weight: bold;
+  padding: 0 15px;
   height: 100%;
   width: 100%;
   border-radius: 15px;
   background-color: #f5f5f5;
+}
+form input::-moz-placeholder {
+  font-size: 0.85rem;
+  font-weight: normal;
+}
+form input::placeholder {
+  font-size: 0.85rem;
+  font-weight: normal;
+}
+form button {
+  all: unset;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url("/assets/search.svg");
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */
